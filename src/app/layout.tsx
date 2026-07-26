@@ -15,6 +15,8 @@ const geistMono = Geist_Mono({
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: {
     template: "%s | MIKFAH TECH LTD",

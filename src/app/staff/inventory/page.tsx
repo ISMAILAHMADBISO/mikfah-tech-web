@@ -1,6 +1,8 @@
 import { prisma } from "@/lib/prisma";
 import ProductStockTable from "@/components/ProductStockTable";
 
+export const dynamic = "force-dynamic";
+
 export default async function StaffInventoryPage() {
   const products = await prisma.product.findMany({
     orderBy: { name: 'asc' },
