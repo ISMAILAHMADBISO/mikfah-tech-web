@@ -43,7 +43,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Custom Project Request Form */}
-      <div id="request-form" className="max-w-4xl mx-auto bg-card border border-border/50 rounded-2xl p-8 md:p-12 shadow-lg scroll-mt-24">
+      <div id="request-form" className="max-w-4xl mx-auto bg-card border border-border/50 rounded-2xl p-5 sm:p-8 md:p-12 shadow-lg scroll-mt-24">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your Custom Project</h2>
           <p className="text-muted-foreground">Fill out the form below with your project requirements and our engineering team will get back to you with a comprehensive proposal.</p>

@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { ShoppingCart, Search, Menu, User } from 'lucide-react';
+import { ShoppingCart, Search, Menu, User, X } from 'lucide-react';
 import { useCart } from '@/components/CartProvider';
 
 function CartBadge() {
@@ -22,6 +23,8 @@ function CartBadge() {
 }
 
 export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-8 mx-auto">
@@ -51,11 +54,37 @@ export function Navbar() {
               Sign Up
             </Link>
           </div>
-          <button className="md:hidden text-foreground/60 hover:text-foreground">
-            <Menu className="h-5 w-5" />
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle Menu" 
+            className="md:hidden p-1.5 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
+
+      {/* Responsive Mobile Menu Drawer */}
+      {isOpen && (
+        <div className="md:hidden border-t border-border/40 bg-background/98 backdrop-blur-xl px-6 py-6 space-y-6 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200">
+          <div className="flex flex-col space-y-4 divide-y divide-border/30">
+            <Link onClick={() => setIsOpen(false)} href="/" className="text-base font-bold hover:text-primary transition-colors pt-2 first:pt-0">Home</Link>
+            <Link onClick={() => setIsOpen(false)} href="/shop" className="text-base font-bold hover:text-primary transition-colors pt-3">Shop Components</Link>
+            <Link onClick={() => setIsOpen(false)} href="/services" className="text-base font-bold hover:text-primary transition-colors pt-3">Services & Quotes</Link>
+            <Link onClick={() => setIsOpen(false)} href="/portfolio" className="text-base font-bold hover:text-primary transition-colors pt-3">Portfolio</Link>
+            <Link onClick={() => setIsOpen(false)} href="/blog" className="text-base font-bold hover:text-primary transition-colors pt-3">Blog & Insights</Link>
+            <Link onClick={() => setIsOpen(false)} href="/contact" className="text-base font-bold hover:text-primary transition-colors pt-3">Contact Us</Link>
+          </div>
+          <div className="pt-4 border-t border-border/50 flex flex-col sm:flex-row gap-3">
+            <Link onClick={() => setIsOpen(false)} href="/login" className="w-full py-3 px-4 rounded-lg border border-border text-center font-bold text-sm hover:bg-muted transition-colors flex items-center justify-center gap-2">
+              <User className="h-4 w-4" /> Log in
+            </Link>
+            <Link onClick={() => setIsOpen(false)} href="/signup" className="w-full py-3 px-4 rounded-lg bg-primary text-primary-foreground text-center font-bold text-sm hover:bg-primary/90 transition-colors shadow-md">
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

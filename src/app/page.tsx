@@ -76,16 +76,16 @@ export default async function HomePage() {
               From fiber optic terminations and commercial solar installations to smart home IoT automation, custom 3D printing, print branding, event souvenirs, and electronic component supply—we empower enterprises and innovators across Nigeria.
             </p>
             
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
               <Link 
                 href="/shop" 
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all transform hover:-translate-y-0.5 w-full sm:w-auto"
               >
                 <ShoppingCart className="w-5 h-5" /> Shop Components
               </Link>
               <a 
                 href="#divisions" 
-                className="inline-flex items-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700/80 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700/80 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all w-full sm:w-auto"
               >
                 Explore Divisions <ArrowRight className="w-5 h-5" />
               </a>
@@ -461,18 +461,18 @@ export default async function HomePage() {
           <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Whether you require high-precision fiber termination, commercial solar engineering, custom 3D printing, event souvenirs, or corporate tech training—our team is ready.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 items-stretch sm:items-center">
             <a 
               href="https://wa.me/2349067285522?text=Hello%20MIKFAH%20TECH%2C%20I%20would%20like%20to%20discuss%20a%20project%20inquiry." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg transition-all transform hover:-translate-y-0.5 w-full sm:w-auto"
             >
-              <MessageCircle className="w-5 h-5 fill-current" /> Chat with Engineering on WhatsApp
+              <MessageCircle className="w-5 h-5 fill-current shrink-0" /> Chat with Engineering on WhatsApp
             </a>
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-lg transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all w-full sm:w-auto"
             >
               Contact Support
             </Link>

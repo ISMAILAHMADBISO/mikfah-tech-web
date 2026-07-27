@@ -34,17 +34,44 @@ export default async function ShopPage() {
             <input 
               type="text" 
               placeholder="Search components..." 
-              className="w-full pl-9 pr-4 py-2 rounded-md border border-input bg-card text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-input bg-card text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring shadow-sm"
             />
           </div>
-          <button className="md:hidden p-2 rounded-md border border-input bg-card text-foreground">
-            <Filter className="h-4 w-4" />
-          </button>
         </div>
       </div>
 
+      {/* Mobile Collapsible Filters */}
+      <details className="md:hidden bg-card border border-border/60 rounded-xl p-4 mb-6 shadow-sm">
+        <summary className="font-bold flex items-center justify-between cursor-pointer text-base">
+          <span className="flex items-center gap-2 text-primary"><SlidersHorizontal className="h-4 w-4" /> Filter Components</span>
+          <span className="text-xs text-muted-foreground font-normal bg-muted px-2.5 py-1 rounded-full">Tap to toggle</span>
+        </summary>
+        <div className="mt-4 pt-4 border-t border-border/40 space-y-6">
+          <div>
+            <h4 className="text-sm font-semibold mb-3 text-foreground">Categories</h4>
+            <div className="grid grid-cols-2 gap-2.5">
+              {['Development Boards', 'Sensors', 'Displays', 'Relays', 'Power Modules'].map(cat => (
+                <label key={cat} className="flex items-center gap-2 text-sm cursor-pointer bg-background p-2 rounded-lg border border-border/50">
+                  <input type="checkbox" className="rounded border-input text-primary focus:ring-primary" />
+                  <span className="truncate">{cat}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+          
+          <div className="pt-4 border-t border-border/50">
+            <h4 className="text-sm font-semibold mb-2 text-foreground">Price Range</h4>
+            <input type="range" className="w-full accent-primary" />
+            <div className="flex justify-between text-xs text-muted-foreground mt-1 font-medium">
+              <span>₦0</span>
+              <span>₦100,000+</span>
+            </div>
+          </div>
+        </div>
+      </details>
+
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Sidebar Filters */}
+        {/* Desktop Sidebar Filters */}
         <aside className="w-full md:w-64 shrink-0 hidden md:block space-y-8">
           <div>
             <h3 className="font-semibold mb-4 flex items-center gap-2"><SlidersHorizontal className="h-4 w-4" /> Filters</h3>

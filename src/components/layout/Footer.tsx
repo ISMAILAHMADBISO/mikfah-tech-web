@@ -25,17 +25,17 @@ export function Footer() {
           </div>
           <div className="space-y-4">
             <h4 className="text-md font-semibold">Contact</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-muted-foreground break-words">
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
                 <span>Head Office: Abubakar Usman Road, Jama'a, Zango Shanu, Zaria, Kaduna State, Nigeria</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" />
+                <Phone className="h-4 w-4 shrink-0 text-primary" />
                 <span>09069384731 / 07089459265</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0" />
+                <Mail className="h-4 w-4 shrink-0 text-primary" />
                 <span>mikfahtech@gmail.com</span>
               </li>
             </ul>
@@ -43,9 +43,9 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-md font-semibold">Newsletter</h4>
             <p className="text-sm text-muted-foreground">Subscribe to get the latest tech news and product updates.</p>
-            <div className="flex gap-2">
-              <input type="email" placeholder="Email address" className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring" />
-              <button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">Subscribe</button>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input type="email" placeholder="Email address" className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring" />
+              <button className="inline-flex items-center justify-center rounded-md text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-6 py-2 shrink-0">Subscribe</button>
             </div>
           </div>
         </div>
