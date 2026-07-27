@@ -113,6 +113,9 @@ export function ProjectRequestForm() {
             <option value="PCB Design & Prototyping">PCB Design & Prototyping</option>
             <option value="AI / Machine Learning">AI / Machine Learning</option>
             <option value="Industrial Automation">Industrial Automation</option>
+            <option value="3D Printing & CAD Modeling">3D Printing & CAD Modeling</option>
+            <option value="Branding, Banners & Flyers">Branding, Banners & Flyers</option>
+            <option value="Custom Souvenirs & Jotters (Graduations, Weddings, Events)">Custom Souvenirs & Jotters (Graduations, Weddings, Events)</option>
             <option value="Final Year Academic Project">Final Year Academic Project</option>
             <option value="Other">Other</option>
           </select>

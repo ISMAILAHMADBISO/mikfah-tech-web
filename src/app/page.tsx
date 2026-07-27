@@ -15,7 +15,10 @@ import {
   ShoppingCart,
   MessageCircle,
   Building2,
-  Calendar
+  Calendar,
+  Printer,
+  Gift,
+  Palette
 } from "lucide-react";
 
 export const dynamic = "force-dynamic";
@@ -70,7 +73,7 @@ export default async function HomePage() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
-              From fiber optic terminations and commercial solar installations to smart home IoT automation and premium electronic component supply—we empower enterprises and innovators across Nigeria.
+              From fiber optic terminations and commercial solar installations to smart home IoT automation, custom 3D printing, print branding, event souvenirs, and electronic component supply—we empower enterprises and innovators across Nigeria.
             </p>
             
             <div className="flex flex-wrap gap-4 items-center">
@@ -100,7 +103,7 @@ export default async function HomePage() {
               Comprehensive Technology Divisions
             </h2>
             <p className="text-muted-foreground mt-4 text-base md:text-lg">
-              MIKFAH TECH LTD operates at the intersection of hardware infrastructure, renewable energy, security, and professional skill development.
+              MIKFAH TECH LTD operates at the intersection of hardware infrastructure, renewable energy, security, custom 3D prototyping, branding, and professional skill development.
             </p>
           </div>
 
@@ -205,6 +208,57 @@ export default async function HomePage() {
               <ul className="space-y-2 text-xs font-semibold text-foreground border-t border-border/50 pt-4">
                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Arduino, ESP32, Raspberry Pi & STM32</li>
                 <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Nationwide Express Shipping</li>
+              </ul>
+            </div>
+
+            {/* Pillar 7: 3D Printing & CAD Modeling */}
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Printer className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">3D Printing & CAD Modeling</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  Precision 3D printing, rapid prototyping, and custom CAD modeling for industrial parts, electronic enclosures, robotics, and mechanical prototypes.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs font-semibold text-foreground border-t border-border/50 pt-4">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Custom Enclosures & Mechanical Parts</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> High-Precision CAD 3D Design</li>
+              </ul>
+            </div>
+
+            {/* Pillar 8: Branding, Banners & Flyers */}
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Palette className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Branding, Banners & Flyers</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  High-impact print graphic design and commercial branding. We produce durable flex banners, promotional roll-up stands, flyers, business cards, and identity assets.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs font-semibold text-foreground border-t border-border/50 pt-4">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Flex Banners & Roll-up Stands</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Promotional Flyers & Corporate Branding</li>
+              </ul>
+            </div>
+
+            {/* Pillar 9: Custom Souvenirs & Jotters */}
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Gift className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">Custom Souvenirs & Jotters</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  Premium customized jotters, branded souvenirs, and celebratory gift packages tailored for university graduations, weddings, seminars, and corporate events.
+                </p>
+              </div>
+              <ul className="space-y-2 text-xs font-semibold text-foreground border-t border-border/50 pt-4">
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Graduation & Wedding Souvenirs</li>
+                <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Customized Branded Jotters</li>
               </ul>
             </div>
 
@@ -405,7 +459,7 @@ export default async function HomePage() {
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to initiate your next project?</h2>
           <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Whether you require high-precision fiber termination, commercial solar engineering, CCTV security, or corporate tech training—our engineers are ready.
+            Whether you require high-precision fiber termination, commercial solar engineering, custom 3D printing, event souvenirs, or corporate tech training—our team is ready.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 

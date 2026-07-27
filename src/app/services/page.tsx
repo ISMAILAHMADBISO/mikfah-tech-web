@@ -1,4 +1,4 @@
-import { Cpu, Globe, Code, Smartphone, Bot, Zap, PenTool, Database, Monitor, Send } from "lucide-react";
+import { Cpu, Globe, Code, Smartphone, Bot, Zap, PenTool, Database, Monitor, Send, Printer, Gift, Palette } from "lucide-react";
 import Link from "next/link";
 import { ProjectRequestForm } from "@/components/services/ProjectRequestForm";
 
@@ -9,6 +9,9 @@ const services = [
   { id: "web", icon: <Monitor className="w-8 h-8" />, title: "Website Development", description: "Modern, responsive, and performant web applications tailored to your business needs." },
   { id: "mobile", icon: <Smartphone className="w-8 h-8" />, title: "Mobile Apps", description: "Cross-platform mobile applications for iOS and Android using modern frameworks." },
   { id: "ai", icon: <Bot className="w-8 h-8" />, title: "AI Projects & Robotics", description: "Artificial Intelligence integration and custom robotics prototyping for industrial automation." },
+  { id: "3d-printing", icon: <Printer className="w-8 h-8" />, title: "3D Printing & CAD Modeling", description: "Precision 3D printing, rapid prototyping, and custom mechanical CAD modeling for enclosures, robotics, and industrial designs." },
+  { id: "branding-printing", icon: <Palette className="w-8 h-8" />, title: "Branding, Banners & Flyers", description: "High-impact print graphic design, flex banners, roll-up display stands, promotional flyers, business cards, and corporate branding." },
+  { id: "souvenirs-jotters", icon: <Gift className="w-8 h-8" />, title: "Custom Souvenirs & Jotters", description: "Premium customized jotters, branded souvenirs, and celebratory gift packages tailored for graduations, weddings, ceremonies, and corporate events." },
 ];
 
 export default function ServicesPage() {
@@ -17,7 +20,7 @@ export default function ServicesPage() {
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6">Our Technical Services</h1>
         <p className="text-lg text-muted-foreground">
-          From bare-metal firmware to global cloud architectures, MIKFAH TECH LTD provides comprehensive engineering and software development services.
+          From bare-metal firmware and custom 3D printing to print branding, event souvenirs, and cloud architectures, MIKFAH TECH LTD provides comprehensive engineering and creative services.
         </p>
       </div>
 

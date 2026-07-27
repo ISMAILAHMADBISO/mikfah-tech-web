@@ -75,7 +75,7 @@ export default async function PortfolioPage() {
         </div>
         
         <div className="flex gap-2">
-          {['All', 'IoT & Embedded', 'Web App', 'PCB Design'].map((filter, i) => (
+          {['All', 'IoT & Embedded', 'Web App', 'PCB Design', '3D Printing', 'Branding & Print'].map((filter, i) => (
             <button key={i} className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${i === 0 ? 'bg-primary text-primary-foreground' : 'bg-muted/50 text-muted-foreground hover:text-foreground hover:bg-muted'}`}>
               {filter}
             </button>
@@ -128,7 +128,7 @@ export default async function PortfolioPage() {
       <div className="mt-20 bg-primary/10 border border-primary/20 rounded-2xl p-8 md:p-12 text-center">
         <h2 className="text-3xl font-bold text-foreground mb-4">Have a project in mind?</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-          Our engineering team is ready to turn your idea into a reality. Whether it's a custom PCB, a scalable web app, or an intelligent IoT system.
+          Our engineering team is ready to turn your idea into a reality. Whether it's a custom PCB, 3D printed prototype, print branding, or an intelligent IoT system.
         </p>
         <Link href="/services#request-form" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
           Request a Quote <ArrowRight className="w-5 h-5" />
