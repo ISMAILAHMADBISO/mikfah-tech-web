@@ -42,9 +42,14 @@ const defaultProjects = [
 ];
 
 export default async function PortfolioPage() {
-  const dbPortfolios = await prisma.portfolio.findMany({
-    orderBy: { createdAt: "desc" }
-  });
+  let dbPortfolios = [];
+  try {
+    dbPortfolios = await prisma.portfolio.findMany({
+      orderBy: { createdAt: "desc" }
+    });
+  } catch (error) {
+    console.error("Error loading portfolios:", error);
+  }
 
   const displayProjects = dbPortfolios.length > 0 ? dbPortfolios.map(p => ({
     id: p.id,

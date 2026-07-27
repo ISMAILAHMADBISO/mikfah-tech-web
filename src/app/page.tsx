@@ -22,23 +22,30 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0; // Ensure fresh data on landing page load
 
 export default async function HomePage() {
-  // Fetch dynamic content from DB
-  const products = await prisma.product.findMany({
-    take: 6,
-    orderBy: { createdAt: "desc" },
-    include: { category: true }
-  });
+  // Fetch dynamic content from DB safely
+  let products = [];
+  let portfolios = [];
+  let blogs = [];
+  try {
+    products = await prisma.product.findMany({
+      take: 6,
+      orderBy: { createdAt: "desc" },
+      include: { category: true }
+    });
 
-  const portfolios = await prisma.portfolio.findMany({
-    take: 4,
-    orderBy: { createdAt: "desc" }
-  });
+    portfolios = await prisma.portfolio.findMany({
+      take: 4,
+      orderBy: { createdAt: "desc" }
+    });
 
-  const blogs = await prisma.blog.findMany({
-    where: { published: true },
-    take: 3,
-    orderBy: { createdAt: "desc" }
-  });
+    blogs = await prisma.blog.findMany({
+      where: { published: true },
+      take: 3,
+      orderBy: { createdAt: "desc" }
+    });
+  } catch (error) {
+    console.error("Error loading homepage data:", error);
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">

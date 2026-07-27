@@ -6,14 +6,19 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function ShopPage() {
-  const products = await prisma.product.findMany({
-    include: {
-      category: true
-    },
-    orderBy: {
-      createdAt: 'desc'
-    }
-  });
+  let products = [];
+  try {
+    products = await prisma.product.findMany({
+      include: {
+        category: true
+      },
+      orderBy: {
+        createdAt: 'desc'
+      }
+    });
+  } catch (error) {
+    console.error("Error loading products:", error);
+  }
 
   return (
     <div className="container mx-auto px-4 md:px-8 py-8">
