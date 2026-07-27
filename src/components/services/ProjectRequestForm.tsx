@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Upload, FileText, X } from "lucide-react";
 import { submitProjectRequestAction } from "@/app/actions/content";
 
 export function ProjectRequestForm() {
   const [isPending, startTransition] = useTransition();
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [fileName, setFileName] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -22,6 +23,7 @@ export function ProjectRequestForm() {
         setError(res.error);
       } else {
         setSuccess(true);
+        setFileName(null);
         (e.target as HTMLFormElement).reset();
       }
     });
@@ -146,10 +148,47 @@ export function ProjectRequestForm() {
 
       <div className="space-y-2">
         <label className="text-sm font-medium text-foreground">Upload Files / Schematics (Optional)</label>
-        <div className="border-2 border-dashed border-border rounded-lg p-8 text-center bg-muted/10 hover:bg-muted/30 transition-colors cursor-pointer">
-          <p className="text-sm text-muted-foreground">Click to upload or drag and drop</p>
-          <p className="text-xs text-muted-foreground mt-1">PDF, DOCX, ZIP, JPG, PNG (Max 10MB)</p>
-        </div>
+        <label className="border-2 border-dashed border-border rounded-lg p-8 text-center bg-muted/10 hover:bg-muted/30 transition-colors cursor-pointer block">
+          <input 
+            type="file" 
+            name="file" 
+            className="hidden" 
+            onChange={(e) => {
+              const file = e.target.files?.[0];
+              if (file) {
+                setFileName(file.name);
+              } else {
+                setFileName(null);
+              }
+            }}
+            disabled={isPending}
+            accept=".pdf,.docx,.doc,.zip,.jpg,.jpeg,.png"
+          />
+          {fileName ? (
+            <div className="flex items-center justify-center gap-3 text-emerald-600 dark:text-emerald-400 font-medium">
+              <FileText className="w-6 h-6" />
+              <span>Selected: {fileName}</span>
+              <button 
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setFileName(null);
+                  const input = e.currentTarget.parentElement?.previousElementSibling as HTMLInputElement;
+                  if (input) input.value = "";
+                }}
+                className="p-1 hover:bg-emerald-500/20 rounded-full text-emerald-600"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          ) : (
+            <>
+              <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2 opacity-70" />
+              <p className="text-sm text-muted-foreground font-medium">Click to browse or drag and drop file</p>
+              <p className="text-xs text-muted-foreground mt-1">PDF, DOCX, ZIP, JPG, PNG (Max 10MB)</p>
+            </>
+          )}
+        </label>
       </div>
 
       <div className="pt-4">

@@ -199,6 +199,9 @@ export async function submitProjectRequestAction(formData: FormData) {
       return { error: "Please fill in all required fields." };
     }
 
+    const file = formData.get("file") as File | null;
+    const fileUrl = await saveUploadedFile(file);
+
     await prisma.projectRequest.create({
       data: {
         name,
@@ -208,7 +211,7 @@ export async function submitProjectRequestAction(formData: FormData) {
         projectType,
         budget,
         description,
-        fileUrls: [],
+        fileUrls: fileUrl ? [fileUrl] : [],
         status: "PENDING"
       }
     });
