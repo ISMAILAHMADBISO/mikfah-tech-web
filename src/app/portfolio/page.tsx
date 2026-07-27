@@ -42,7 +42,7 @@ const defaultProjects = [
 ];
 
 export default async function PortfolioPage() {
-  let dbPortfolios = [];
+  let dbPortfolios: any[] = [];
   try {
     dbPortfolios = await prisma.portfolio.findMany({
       orderBy: { createdAt: "desc" }
@@ -108,7 +108,7 @@ export default async function PortfolioPage() {
               
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, i) => (
+                  {project.tech.map((tech: any, i: number) => (
                     <span key={i} className="text-xs bg-muted/50 text-muted-foreground px-2 py-1 rounded-md border border-border/50">
                       {tech}
                     </span>

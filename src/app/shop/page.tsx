@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function ShopPage() {
-  let products = [];
+  let products: any[] = [];
   try {
     products = await prisma.product.findMany({
       include: {

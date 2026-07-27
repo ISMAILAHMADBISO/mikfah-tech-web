@@ -23,9 +23,9 @@ export const revalidate = 0; // Ensure fresh data on landing page load
 
 export default async function HomePage() {
   // Fetch dynamic content from DB safely
-  let products = [];
-  let portfolios = [];
-  let blogs = [];
+  let products: any[] = [];
+  let portfolios: any[] = [];
+  let blogs: any[] = [];
   try {
     products = await prisma.product.findMany({
       take: 6,
@@ -326,7 +326,7 @@ export default async function HomePage() {
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border/40">
-                    {item.technologies.map((tech, i) => (
+                    {item.technologies.map((tech: any, i: number) => (
                       <span key={i} className="px-2.5 py-1 rounded-md bg-muted/60 text-foreground text-[11px] font-medium">
                         {tech}
                       </span>

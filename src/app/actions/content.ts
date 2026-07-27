@@ -184,3 +184,55 @@ export async function deleteBlogAction(id: string) {
     return { error: error.message || "Failed to delete blog post" };
   }
 }
+
+export async function submitProjectRequestAction(formData: FormData) {
+  try {
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const company = (formData.get("company") as string) || "";
+    const projectType = formData.get("projectType") as string;
+    const budget = (formData.get("budget") as string) || "";
+    const description = formData.get("description") as string;
+
+    if (!name || !email || !phone || !projectType || !description) {
+      return { error: "Please fill in all required fields." };
+    }
+
+    await prisma.projectRequest.create({
+      data: {
+        name,
+        email,
+        phone,
+        company,
+        projectType,
+        budget,
+        description,
+        fileUrls: [],
+        status: "PENDING"
+      }
+    });
+
+    // Notify all admin users
+    const admins = await prisma.user.findMany({
+      where: { role: { in: ["SUPER_ADMIN", "MANAGER"] } }
+    });
+
+    for (const admin of admins) {
+      await prisma.notification.create({
+        data: {
+          userId: admin.id,
+          title: "New Custom Project Inquiry!",
+          message: `New ${projectType} request from ${name} (${email}). Budget: ₦${budget}.`
+        }
+      });
+    }
+
+    revalidatePath("/admin/inquiries");
+    revalidatePath("/admin");
+    return { success: true };
+  } catch (error: any) {
+    console.error("Project request error:", error);
+    return { error: error.message || "Failed to submit project request." };
+  }
+}
