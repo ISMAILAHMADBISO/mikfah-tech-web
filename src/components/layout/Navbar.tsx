@@ -50,7 +50,7 @@ export function Navbar() {
             <Link href="/login" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
               <User className="h-4 w-4" /> Log in
             </Link>
-            <Link href="/signup" className="text-sm font-bold bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
+            <Link href="/signup" className="text-sm font-bold bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 active:scale-95 shadow-sm shadow-primary/20">
               Sign Up
             </Link>
           </div>

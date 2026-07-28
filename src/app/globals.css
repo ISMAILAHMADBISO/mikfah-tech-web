@@ -120,11 +120,39 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+  }
+
+  /* UI/UX: Custom Scrollbar for better aesthetics across the platform */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full hover:bg-muted-foreground/50 transition-colors;
+  }
+
+  /* UI/UX: Brand-aligned text selection */
+  ::selection {
+    @apply bg-primary/20 text-primary-foreground;
+  }
+  
+  ::-moz-selection {
+    @apply bg-primary/20 text-primary-foreground;
+  }
+
+  /* UI/UX: Global focus accessibility enhancement */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary/40 ring-offset-1 ring-offset-background transition-shadow;
   }
 }

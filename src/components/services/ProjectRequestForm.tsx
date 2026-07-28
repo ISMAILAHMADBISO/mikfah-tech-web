@@ -57,7 +57,7 @@ export function ProjectRequestForm() {
             required 
             name="name" 
             type="text" 
-            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary" 
+            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary" 
             placeholder="John Doe" 
             disabled={isPending}
           />
@@ -68,7 +68,7 @@ export function ProjectRequestForm() {
             required 
             name="email" 
             type="email" 
-            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary" 
+            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary" 
             placeholder="john@company.com" 
             disabled={isPending}
           />
@@ -79,7 +79,7 @@ export function ProjectRequestForm() {
             required 
             name="phone" 
             type="tel" 
-            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary" 
+            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary" 
             placeholder="+234 900 000 0000" 
             disabled={isPending}
           />
@@ -89,7 +89,7 @@ export function ProjectRequestForm() {
           <input 
             name="company" 
             type="text" 
-            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary" 
+            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary" 
             placeholder="Optional" 
             disabled={isPending}
           />
@@ -102,7 +102,7 @@ export function ProjectRequestForm() {
           <select 
             required 
             name="projectType" 
-            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary cursor-pointer"
+            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary cursor-pointer"
             disabled={isPending}
           >
             <option value="">Select a service category</option>
@@ -125,7 +125,7 @@ export function ProjectRequestForm() {
           <select 
             required 
             name="budget" 
-            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary cursor-pointer"
+            className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary cursor-pointer"
             disabled={isPending}
           >
             <option value="">Select budget range</option>
@@ -143,7 +143,7 @@ export function ProjectRequestForm() {
           required 
           name="description" 
           rows={5} 
-          className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary resize-y" 
+          className="w-full rounded-md border border-input bg-background px-4 py-3 text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary resize-y" 
           placeholder="Please describe your project requirements in detail..."
           disabled={isPending}
         ></textarea>
@@ -198,7 +198,7 @@ export function ProjectRequestForm() {
         <button 
           type="submit" 
           disabled={isPending}
-          className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50 px-8 py-4 rounded-md font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-primary/20 cursor-pointer"
+          className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:transform-none px-8 py-4 rounded-md font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-primary/30 cursor-pointer"
         >
           <Send className="h-5 w-5" /> {isPending ? "Submitting Request..." : "Submit Project Request"}
         </button>

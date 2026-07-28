@@ -7,8 +7,8 @@ export function ProductCard({ product }: { product: any }) {
   const image = product.images?.[0] || product.image || "https://placehold.co/400?text=No+Image";
 
   return (
-    <div className="group flex flex-col bg-card rounded-lg border border-border/50 overflow-hidden hover:border-primary/50 transition-colors shadow-sm">
-      <Link href={`/shop/${product.id}`} className="aspect-square relative bg-muted/10 p-4 flex items-center justify-center overflow-hidden block">
+    <div className="group flex flex-col bg-card rounded-2xl border border-border/50 overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 shadow-sm">
+      <Link href={`/shop/${product.id}`} className="aspect-square relative bg-muted/5 p-4 flex items-center justify-center overflow-hidden block">
         <img 
           src={image} 
           alt={product.name}

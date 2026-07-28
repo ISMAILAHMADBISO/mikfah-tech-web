@@ -79,13 +79,13 @@ export default async function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
               <Link 
                 href="/shop" 
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all transform hover:-translate-y-0.5 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 w-full sm:w-auto"
               >
                 <ShoppingCart className="w-5 h-5" /> Shop Components
               </Link>
               <a 
                 href="#divisions" 
-                className="inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700/80 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700/80 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 active:scale-95 w-full sm:w-auto"
               >
                 Explore Divisions <ArrowRight className="w-5 h-5" />
               </a>
@@ -110,7 +110,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             {/* Pillar 1: Fiber Terminations */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Network className="w-7 h-7" />
@@ -127,7 +127,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 2: Commercial Solar Power */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Zap className="w-7 h-7" />
@@ -144,7 +144,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 3: CCTV & Security */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Video className="w-7 h-7" />
@@ -161,7 +161,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 4: Smart House Automation */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <HomeIcon className="w-7 h-7" />
@@ -178,7 +178,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 5: Tech Capacity Building */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <GraduationCap className="w-7 h-7" />
@@ -195,7 +195,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 6: Electronic Component Supply */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Cpu className="w-7 h-7" />
@@ -212,7 +212,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 7: 3D Printing & CAD Modeling */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Printer className="w-7 h-7" />
@@ -229,7 +229,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 8: Branding, Banners & Flyers */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Palette className="w-7 h-7" />
@@ -246,7 +246,7 @@ export default async function HomePage() {
             </div>
 
             {/* Pillar 9: Custom Souvenirs & Jotters */}
-            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+            <div className="bg-background border border-border/60 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <Gift className="w-7 h-7" />
@@ -466,13 +466,13 @@ export default async function HomePage() {
               href="https://wa.me/2349067285522?text=Hello%20MIKFAH%20TECH%2C%20I%20would%20like%20to%20discuss%20a%20project%20inquiry." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg transition-all transform hover:-translate-y-0.5 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 w-full sm:w-auto"
             >
               <MessageCircle className="w-5 h-5 fill-current shrink-0" /> Chat with Engineering on WhatsApp
             </a>
             <Link 
               href="/contact" 
-              className="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-base md:text-lg transition-all duration-300 active:scale-95 w-full sm:w-auto"
             >
               Contact Support
             </Link>

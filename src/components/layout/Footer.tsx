@@ -44,8 +44,8 @@ export function Footer() {
             <h4 className="text-md font-semibold">Newsletter</h4>
             <p className="text-sm text-muted-foreground">Subscribe to get the latest tech news and product updates.</p>
             <div className="flex flex-col sm:flex-row gap-2">
-              <input type="email" placeholder="Email address" className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring" />
-              <button className="inline-flex items-center justify-center rounded-md text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-10 px-6 py-2 shrink-0">Subscribe</button>
+              <input type="email" placeholder="Email address" className="flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-all duration-300 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary" />
+              <button className="inline-flex items-center justify-center rounded-md text-sm font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20 bg-primary text-primary-foreground shadow hover:bg-primary/90 hover:-translate-y-0.5 active:scale-95 h-10 px-6 py-2 shrink-0">Subscribe</button>
             </div>
           </div>
         </div>

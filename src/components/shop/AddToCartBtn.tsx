@@ -67,10 +67,10 @@ export function AddToCartBtn({ product, className = "", showBuyNow = true }: Add
         type="button"
         onClick={handleAdd}
         disabled={added}
-        className={`flex-1 py-2.5 px-3 rounded-lg font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200 shadow-sm ${
+        className={`flex-1 py-2.5 px-3 rounded-lg font-bold text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-sm active:scale-95 ${
           added
             ? "bg-green-600 text-white shadow-green-600/30 scale-95"
-            : "bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary/20 hover:scale-[1.02]"
+            : "bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary/30 hover:-translate-y-0.5"
         } ${className}`}
       >
         {added ? (
@@ -88,7 +88,7 @@ export function AddToCartBtn({ product, className = "", showBuyNow = true }: Add
         <button
           type="button"
           onClick={handleBuyNow}
-          className="py-2.5 px-3 rounded-lg font-bold text-xs bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border transition-colors whitespace-nowrap"
+          className="py-2.5 px-3 rounded-lg font-bold text-xs bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border transition-all duration-300 hover:-translate-y-0.5 active:scale-95 whitespace-nowrap shadow-sm hover:shadow"
         >
           Cart &rarr;
         </button>
