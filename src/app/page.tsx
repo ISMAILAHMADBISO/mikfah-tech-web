@@ -73,7 +73,7 @@ export default async function HomePage() {
             </h1>
             
             <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
-              From fiber optic terminations and commercial solar installations to smart home IoT automation, custom 3D printing, print branding, event souvenirs, and electronic component supply—we empower enterprises and innovators across Nigeria.
+              From fiber optic terminations and commercial solar installations to smart home IoT automation, custom 3D printing, print branding, event souvenirs, and electronic component supply we empower enterprises and innovators across Nigeria.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
@@ -117,7 +117,7 @@ export default async function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Fiber Optic Terminations</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  Precision fusion splicing, OTDR testing, backbone cabling, and enterprise fiber infrastructure deployment with minimal db loss and industry-grade reliability.
+                  Precision fusion splicing, OTDR testing, backbone cabling, and enterprise fiber infrastructure deployment with minimal db loss and industry grade reliability.
                 </p>
               </div>
               <ul className="space-y-2 text-xs font-semibold text-foreground border-t border-border/50 pt-4">
@@ -236,7 +236,7 @@ export default async function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Branding, Banners & Flyers</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                  High-impact print graphic design and commercial branding. We produce durable flex banners, promotional roll-up stands, flyers, business cards, and identity assets.
+                  High impact print graphic design and commercial branding. We produce durable flex banners, promotional roll-up stands, flyers, business cards, and identity assets.
                 </p>
               </div>
               <ul className="space-y-2 text-xs font-semibold text-foreground border-t border-border/50 pt-4">
@@ -459,7 +459,7 @@ export default async function HomePage() {
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Ready to initiate your next project?</h2>
           <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Whether you require high-precision fiber termination, commercial solar engineering, custom 3D printing, event souvenirs, or corporate tech training—our team is ready.
+            Whether you require high precision fiber termination, commercial solar engineering, custom 3D printing, event souvenirs, or corporate tech training our team is ready.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 items-stretch sm:items-center">
             <a 
